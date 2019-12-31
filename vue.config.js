@@ -1,3 +1,15 @@
+
+const WebpackPreBuildPlugin = require('pre-build-webpack');
+
+let onPrebuild
+try {
+  onPrebuild = require('./.preBuild.js'); }
+catch (e) {
+  console.error('无法加载编译前置处理文件： .preBuild.js');
+  console.error(e);
+  throw e;
+}
+
 module.exports = {
   configureWebpack: {
     resolve: {
@@ -11,7 +23,12 @@ module.exports = {
         'views': '@/views',
         'style': '@/style',
       }
-    }
+    },
+    plugins: [
+      new WebpackPreBuildPlugin(function (stats) {
+        onPrebuild && onPrebuild(stats)
+      })
+    ],
   },
   devServer: {
     port: 7000,

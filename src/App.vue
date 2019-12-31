@@ -1,12 +1,24 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link :to="home">Home</router-link> |
+      <router-link :to="about">About</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+import pageRoutes from './views/pageRoutes'
+export default {
+  data() {
+    return {
+      home: pageRoutes.Home,
+      about: pageRoutes.About,
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
