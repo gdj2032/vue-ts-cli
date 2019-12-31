@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <HelloWorld msg="aaaaa" />
     <button @click="increment">加1</button>
     <div>{{$store.state.count}}</div>
   </div>
@@ -13,7 +12,6 @@ import { shopService } from "service";
 export default {
   name: "home",
   components: {
-    HelloWorld
   },
   data() {
     return {
