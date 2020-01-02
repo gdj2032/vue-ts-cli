@@ -2,6 +2,8 @@
 
 ## assets/images 图片
 
+## assets/style scss样式
+
 ## components 组件库
 
 ## components/common 公共组件库
@@ -17,8 +19,6 @@
 ## service 网络请求服务
 
 ## store vuex缓存
-
-## style 全局scss
 
 ## utils 第三方插件封装或者自己封装的js
 
