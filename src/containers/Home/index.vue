@@ -1,13 +1,13 @@
 <template>
   <div class="home">
+    <div>主页</div>
     <button @click="increment">加1</button>
     <div>{{$store.state.count}}</div>
   </div>
 </template>
 
 <script>
-export const RoutePath = '/home';
-import { shopService } from "service";
+import { shopService } from "../../service";
 
 export default {
   name: "home",
@@ -31,3 +31,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.home {
+  text-align: center
+}
+</style>

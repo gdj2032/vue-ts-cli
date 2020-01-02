@@ -2,10 +2,6 @@
 import { createPath } from './utils';
 const pageRoutes = {
 	About: '/about',
-	HomeAdd: '/home/add',
-	AddTest: '/home/add/test',
-	HomeDetail: '/home/detail',
-	Home: '/home',
 	User: (id: any) => createPath('/user/:id', { id }),
 };
 export default pageRoutes;

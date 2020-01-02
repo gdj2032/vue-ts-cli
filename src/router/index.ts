@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import autoImport from './autoImport'
+import { Home } from '../containers'
 
 Vue.use(VueRouter)
-console.log('autoImport()', autoImport())
 
 const routes = [
   {
     path: '/',
     redirect: '/home'
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home
   },
   ...autoImport(),
   // {
