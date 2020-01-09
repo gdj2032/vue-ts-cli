@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Header />
     <div>主页</div>
     <button @click="increment">加1</button>
     <div>{{$store.state.count}}</div>
@@ -24,10 +25,12 @@
 
 <script>
 import { shopService } from "@/service";
+import Header from '../Header'
 
 export default {
   name: "home",
   components: {
+    Header
   },
   data() {
     return {
@@ -52,6 +55,5 @@ export default {
 
 <style lang="scss">
 .home {
-  text-align: center
 }
 </style>

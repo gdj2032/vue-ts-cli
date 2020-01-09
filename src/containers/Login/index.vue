@@ -1,14 +1,13 @@
 <template>
-  <div>user</div>
+  <div>login</div>
 </template>
 
 <script>
-export const RoutePath = '/user/:id';
 export default {
-
+  name: 'login'
 }
 </script>
 
-<style>
+<style lang='scss'>
 
 </style>
