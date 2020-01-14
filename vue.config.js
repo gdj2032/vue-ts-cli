@@ -17,12 +17,14 @@ module.exports = {
       alias: {
         'assets': '@/assets',
         'components': '@/components',
-        'containers': '@/containers',
         'constants': '@/constants',
+        'containers': '@/containers',
         'request': '@/request',
+        'router': '@/router',
         'service': '@/service',
+        'store': '@/store',
         'views': '@/views',
-        'style': '@/style',
+        'utils': '@/utils',
       }
     },
     plugins: [

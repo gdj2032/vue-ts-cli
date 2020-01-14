@@ -1,3 +1,5 @@
+@import './normalize.scss';
+
 $header-height: 160px;
 
 $background-gray: #dddddd;
@@ -10,3 +12,7 @@ $white: #fff;
 $padding-left-right: 200px;
 
 $min-width: 1500px;
+
+a:hover {
+  cursor: pointer;
+}

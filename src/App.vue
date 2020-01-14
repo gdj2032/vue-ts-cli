@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <router-view/>
   </div>
 </template>
@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  margin: 0;
+}
 </style>

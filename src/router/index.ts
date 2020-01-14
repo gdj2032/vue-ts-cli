@@ -1,22 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import autoImport from './autoImport'
-import { Home, Login } from '../containers'
+import { Home, Login, Register } from '../containers'
+import pageRoutes from '@/views/pageRoutes'
 
 Vue.use(VueRouter)
+
+export const PathRoutes = {
+  home: '/home',
+  login: '/login',
+  register: '/register',
+  ...pageRoutes,
+}
 
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: PathRoutes.home
   },
   {
-    path: '/login',
+    path: PathRoutes.login,
     name: 'login',
     component: Login
   },
   {
-    path: '/home',
+    path: PathRoutes.register,
+    name: 'register',
+    component: Register
+  },
+  {
+    path: PathRoutes.home,
     name: 'home',
     component: Home
   },
